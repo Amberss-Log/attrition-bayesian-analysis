@@ -1,0 +1,12 @@
+variable,chi2,p_value,cramers_v,n,test,t_stat,cohens_d,mean_yes,mean_no,u_stat,median_yes,median_no
+OverTime,87.56,0.0,0.244,1470.0,chi-square,,,,,,,
+MaritalStatus,46.16,0.0,0.177,1470.0,chi-square,,,,,,,
+BusinessTravel,24.18,1e-05,0.128,1470.0,chi-square,,,,,,,
+JobRole,86.19,0.0,0.242,1470.0,chi-square,,,,,,,
+MonthlyIncome,,0.0,,,welch t-test,-7.48,-0.479,4787.1,6832.7,,,
+DistanceFromHome,,0.00414,,,welch t-test,2.89,0.209,10.6,8.9,,,
+Age,,0.0,,,welch t-test,-5.83,-0.425,33.6,37.6,,,
+TotalWorkingYears,,0.0,,,welch t-test,-7.02,-0.484,8.2,11.9,,,
+JobSatisfaction,,8e-05,,,mann-whitney,,,,,123362.5,3.0,3.0
+EnvironmentSatisfaction,,0.00022,,,mann-whitney,,,,,124787.0,3.0,3.0
+WorkLifeBalance,,0.04647,,,mann-whitney,,,,,135709.5,3.0,3.0

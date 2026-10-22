@@ -1,0 +1,5 @@
+OverTime,career,attrition_rate,employees
+No,Early (<=5 yrs),18.1,226
+No,Experienced (>5 yrs),8.3,828
+Yes,Early (<=5 yrs),55.6,90
+Yes,Experienced (>5 yrs),23.6,326

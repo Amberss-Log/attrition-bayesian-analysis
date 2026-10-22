@@ -49,7 +49,7 @@ def log_posterior(theta, X, y, prior_sd=2.0):
     return log_likelihood(theta, X, y) + log_prior(theta, prior_sd=prior_sd)
 
 
-def metropolis_hastings(X, y, n_iter=20000, proposal_sd=0.05, prior_sd=2.0, seed=42):
+def metropolis_hastings(X, y, n_iter=40000, proposal_sd=0.25, prior_sd=2.0, seed=42):
     """
     Random-walk Metropolis-Hastings sampler for [intercept, beta].
 
@@ -62,8 +62,9 @@ def metropolis_hastings(X, y, n_iter=20000, proposal_sd=0.05, prior_sd=2.0, seed
         an initial burn-in window, e.g. the first 5000 draws, before use).
     proposal_sd : float
         Standard deviation of the symmetric Gaussian random-walk proposal.
-        ~0.05 gives a healthy acceptance rate (~20-40%) for this model/scale;
-        tune this if the acceptance rate printed below is far outside that range.
+        0.25 gives ~21% acceptance on the IBM attrition data (OverTime-only model);
+        0.05 is far too small (~73% acceptance, very slow mixing).
+        Aim for roughly 20-40% acceptance for a random-walk sampler.
     prior_sd : float
         Standard deviation of the Normal(0, prior_sd) priors on both parameters.
     seed : int
@@ -115,7 +116,7 @@ if __name__ == "__main__":
     p_demo = 1 / (1 + np.exp(-(true_intercept + true_beta * X_demo)))
     y_demo = rng.binomial(1, p_demo)
 
-    samples, acc_rate = metropolis_hastings(X_demo, y_demo, n_iter=20000, proposal_sd=0.05)
+    samples, acc_rate = metropolis_hastings(X_demo, y_demo)
     burn_in = 5000
     post = samples[burn_in:]
 

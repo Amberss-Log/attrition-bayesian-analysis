@@ -1,7 +1,7 @@
-feature,odds_ratio_mean,odds_ratio_2.5%,odds_ratio_97.5%,credible_effect
-Overtime (Yes vs No),4.56,3.31,6.16,Yes
-Marital Status: Married (vs Divorced),1.33,0.84,2.03,Ambiguous
-Marital Status: Single (vs Divorced),3.37,2.14,5.12,Yes
-Total Working Years (standardized),0.53,0.43,0.64,Yes
-Distance From Home (standardized),1.29,1.11,1.49,Yes
-Job Satisfaction (standardized),0.7,0.6,0.8,Yes
+feature,odds_ratio_median,odds_ratio_3%,odds_ratio_97%,credible_effect
+Overtime (Yes vs No),4.49,3.34,6.07,Yes
+Marital Status: Married (vs Divorced),1.29,0.85,2.0,Ambiguous
+Marital Status: Single (vs Divorced),3.29,2.18,5.03,Yes
+Total Working Years (per +1 SD ≈ 7.8 yrs),0.53,0.44,0.63,Yes
+Distance From Home (per +1 SD ≈ 8.1 km),1.29,1.12,1.48,Yes
+Job Satisfaction (per +1 SD ≈ 1.1 pts),0.69,0.6,0.8,Yes
